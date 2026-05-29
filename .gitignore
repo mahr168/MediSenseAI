@@ -1,34 +1,74 @@
-# Gradle files
-.gradle/
+# ═══════════════════════════════════════════════
+#   MediSense AI — Android .gitignore
+# ═══════════════════════════════════════════════
+
+# ── Gradle build outputs ─────────────────────
 build/
+.gradle/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
 
-# Local configuration file (sdk path, etc)
-local.properties
+# ── APK / AAB release files ──────────────────
+*.apk
+*.aab
+*.ap_
+*.dex
 
-# Log/OS Files
-*.log
-
-# Android Studio generated files and folders
+# ── Android Studio / IntelliJ IDEA ───────────
+.idea/
+*.iml
+*.iws
+*.ipr
+.navigation/
 captures/
 .externalNativeBuild/
 .cxx/
-*.aab
-*.apk
-output-metadata.json
 
-# IntelliJ
-*.iml
-.idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
+# ── Local machine config (NEVER commit) ──────
+local.properties
 
-# Keystore files
+# ── Signing / Keystore (NEVER commit) ────────
 *.jks
 *.keystore
+keystore.properties
+release/
+signing/
 
-# Google Services (e.g. APIs or Firebase)
+# ── Lint & test outputs ───────────────────────
+lint/
+lint-results*
+*.lint
+test-results/
+androidTest-results/
+
+# ── Profiling & logs ──────────────────────────
+*.hprof
+*.log
+proguard/
+mapping.txt
+
+# ── macOS system files ────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ── Windows system files ──────────────────────
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ── Linux system files ────────────────────────
+*~
+
+# ── Node / npm (if any tooling used) ─────────
+node_modules/
+npm-debug.log*
+
+# ── Firebase (if added later) ─────────────────
 google-services.json
 
-# Android Profiling
-*.hprof
+# ── Environment / secrets ─────────────────────
+.env
+.env.local
+secrets.properties
